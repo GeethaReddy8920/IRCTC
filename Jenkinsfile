@@ -5,7 +5,7 @@ pipeline {
    } 
 
    stages {
-     state('git clone') {
+     stage('git clone') {
        steps {
          git url: 'https://github.com/GeethaReddy8920/IRCTC.git', branch:'main'
        } 
