@@ -9,7 +9,7 @@ pipeline {
        steps {
          git url: 'https://github.com/GeethaReddy8920/IRCTC.git', branch:'main'
        } 
-      
+    }      
    stage('build') {
      steps {
       sh 'mvn clean package'
