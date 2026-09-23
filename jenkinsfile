@@ -5,11 +5,17 @@ pipeline {
    } 
 
    stages {
-     stage('build') {
+     state('git clone') {
        steps {
-         sh 'mvn clean package'
+         git url: 'https://github.com/GeethaReddy8920/IRCTC.git', branch:'main'
+       } 
+      
+   stage('build') {
+     steps {
+      sh 'mvn clean package'
         }
       }
     }
   }
+
 
